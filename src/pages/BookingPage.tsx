@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useParams, Link, Navigate, useNavigate } from 'react-router-dom'
+import { useParams, Link, Navigate} from 'react-router-dom'
 import { useHostel } from '@context/HostelContext'
 import { useAuth } from '@context/AuthContext'
 import styles from './BookingPage.module.css'
@@ -20,7 +20,6 @@ export default function BookingPage(): React.ReactElement {
   const { id } = useParams<{ id: string }>()   // ✅ typed params
   const { hostels } = useHostel()
   const { isLoggedIn } = useAuth()
-  const navigate = useNavigate()
 
   const hostel: Hostel | undefined = hostels.find((h) => h.id === id)
 

@@ -163,17 +163,3 @@ function Stat({ value, label }: StatProps): React.ReactElement {
     </div>
   )
 }
-
-type CtaStatProps = {
-  value: string
-  label: string
-}
-
-function CtaStat({ value, label }: CtaStatProps): React.ReactElement {
-  return (
-    <div className={styles.ctaStat}>
-      <strong>{value}</strong>
-      <span>{label}</span>
-    </div>
-  )
-}

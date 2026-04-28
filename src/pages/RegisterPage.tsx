@@ -38,7 +38,7 @@ export default function RegisterPage(): React.ReactElement {
 }
   // 🔥 Better: form submit instead of button click
   const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
+    _: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
    const errorMsg = register({
   name: form.name,

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { AuthProvider } from '@context/AuthContext'
 import { HostelProvider } from '@context/HostelContext'
 import Navbar from '@components/Navbar'
