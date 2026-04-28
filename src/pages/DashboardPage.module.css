@@ -1,0 +1,162 @@
+.page {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-dim));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0d0f14;
+  flex-shrink: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.email { font-size: 0.875rem; color: var(--clr-text-2); margin-top: 2px; }
+
+/* Stats */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.statCard {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+  transition: border-color var(--transition);
+}
+
+.statCard:hover { border-color: rgba(245,166,35,0.35); }
+
+.statIcon { font-size: 1.5rem; }
+.statValue {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-accent);
+}
+.statLabel { font-size: 0.78rem; color: var(--clr-text-2); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Sections */
+.section { display: flex; flex-direction: column; gap: var(--space-md); }
+
+.sectionHead { display: flex; justify-content: space-between; align-items: center; }
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.empty {
+  padding: var(--space-xl);
+  text-align: center;
+  background: var(--clr-bg-card);
+  border: 1px dashed var(--clr-border);
+  border-radius: var(--radius-md);
+  color: var(--clr-text-2);
+  font-size: 0.9rem;
+}
+.empty a { color: var(--clr-accent); font-weight: 600; }
+
+/* Bookings */
+.bookingsList { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+.bookingCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition);
+}
+.bookingCard:hover { border-color: rgba(245,166,35,0.3); }
+
+.bookingInfo { display: flex; flex-direction: column; gap: 3px; }
+.bookingInfo h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; }
+.bookingInfo p { font-size: 0.82rem; color: var(--clr-text-2); }
+.dates { color: var(--clr-text-3) !important; }
+
+.bookingRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-sm);
+}
+
+.amount {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-text-1);
+}
+
+/* Wishlist */
+.wishGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.miniCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm);
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+.miniCard:hover { border-color: rgba(245,166,35,0.35); transform: translateY(-2px); }
+.miniCard img { width: 60px; height: 60px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0; }
+.miniCard > div { display: flex; flex-direction: column; gap: 2px; }
+.miniCard strong { font-size: 0.875rem; font-weight: 600; color: var(--clr-text-1); }
+.miniCard span { font-size: 0.78rem; color: var(--clr-text-2); }
+.miniPrice { color: var(--clr-accent) !important; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .wishGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .statsRow { grid-template-columns: 1fr 1fr; }
+  .wishGrid { grid-template-columns: 1fr; }
+  .bookingCard { flex-direction: column; align-items: flex-start; gap: var(--space-sm); }
+}
